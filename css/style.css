@@ -1,242 +1,223 @@
 * {
-    padding: 0;
-    margin: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
- html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    color: #777777;
-    font-weight: 300;
-    text-rendering: optimizeLegibility;
-  }
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 
-  /*ABOUT*/
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: #777777;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
 
- .main{
-   padding-left: 0;
-   padding-right: 0;
- } 
+/*ABOUT*/
 
- .logo-img{
-  margin-top: 100px;
- 
-  padding-left: 12px;
+.main{
+ padding-left: 0;
+ padding-right: 0;
+} 
+
+.logo-img{
+margin-top: 100px;
+
+padding-left: 12px;
 }
 .track-form{
-  width: 380px;
-  padding-bottom: 30px;
-  margin-top: 30px;
+width: 380px;
+padding-bottom: 30px;
+margin-top: 30px;
 }
 .logo-txt{
-  color:#1E1724;
-  font-weight: 600;
-  margin-top: 150px;
- 
-  
+color:#1E1724;
+font-weight: 600;
+margin-top: 150px;
+
+
 }
 .btn-primary {
-  background-color:#2639A2 !important;
-  border: none;
-  border-radius: 1px;
-  height: 38px;
+background-color:#2639A2 !important;
+border: none;
+border-radius: 1px;
+height: 38px;
 }
 a[type="button"]:hover {
-  background-color:#f2f2f2 !important;
-  color:#2639A2 !important;
-}
-.header-bg{
-  padding-right: 40px;
+background-color:#f2f2f2 !important;
+color:#2639A2 !important;
 }
 
 /*FEATURES*/
 
 .feature-text{
-  color:#1E1724;
-  font-weight: 600;
-  margin-top: 50px;
-  margin-bottom: 40px;
+color:#1E1724;
+font-weight: 600;
+margin-top: 50px;
+margin-bottom: 40px;
 }
 .clear-audio-img{
-  margin-left: 220px;
-  margin-bottom: 20px;
+margin-left: 220px;
+margin-bottom: 20px;
 }
 .clear-audio-text{
-  color:#1E1724;
-  font-weight: 600;
+color:#1E1724;
+font-weight: 600;
 }
 .clear-audio-subtext{
-  margin-bottom: 40px;
+margin-bottom: 40px;
 }
 .apple-watch-img{
-  margin-left: 220px;
-  margin-bottom: 20px;
+margin-left: 220px;
+margin-bottom: 20px;
 }
 .apple-watch-text{
-  color:#1E1724;
-  font-weight: 600;
-}
-.text{
-  padding-right: 0px;
+color:#1E1724;
+font-weight: 600;
 }
 
 /*HOW IT WORKS*/
 
 .app-works{
-  background-color: #f2f2f2;
-  margin-top: 30px;
-  margin-bottom: 40px;
+background-color: #f2f2f2;
+margin-top: 30px;
+margin-bottom: 40px;
 }
 .work-text{
-  padding-top: 40px;
-  color:#1E1724;
-  font-weight: 600;
+padding-top: 40px;
+color:#1E1724;
+font-weight: 600;
+}
+.work-ana{
+  margin-right: 0px;
 }
 .work-logo-img{
-  margin-top: 70px;
-  margin-left: 70px;
+margin-top: 70px;
+margin-left: 30px;
 }
 .record-text{
-  color:#1E1724;
-  font-size: 25px;
- 
+color:#1E1724;
+font-size: 25px;
+
 }
 .record-subtext{
-  padding-bottom: 20px;
+padding-bottom: 20px;
+font-size: 15px;
 }
 .transcribe-text{
-  color:#1E1724;
-  font-size: 25px;
- 
+color:#1E1724;
+font-size: 25px;
+
 }
 .transcribe-subtext{
-  padding-bottom: 20px;
+padding-bottom: 20px;
+font-size: 15px;
 }
 .analyse-text{
-  color:#1E1724;
-  font-size: 25px;
+color:#1E1724;
+font-size: 25px;
 }
 .analyse-subtext{
-  padding-bottom: 20px;
+padding-bottom: 20px;
+font-size: 15px;
 }
 .data-text{
-  color:#1E1724;
-  font-size: 25px;
+color:#1E1724;
+font-size: 25px;
 }     
 .data-subtext{
-  padding-bottom: 50px;
+padding-bottom: 50px;
+font-size: 15px;
 }
 /*GALLERY*/
-.login{
-  background-color: #F2F2F2;
-  margin-top: 30px;
-  padding-top: 20px;
+.gallery-app{
+  margin-top: 40px;
 }
-.conversations{
-  padding-top: 20px;
+.gallery{
+ display: flex;
+ justify-content: center;
 }
-.recordings{
-  background-color: #F2F2F2;
-  padding-top: 20px;
-}
-.wordanalyser{
-  padding-top: 20px;
-  
-}
-.ranking{
-  padding-top: 20px;
-  background-color: #F2F2F2;
-}
-.images{
-  /* transition: 1s; */
-  padding: 15px;
-  vertical-align: middle;
-  /* width: 250px;  */
-}
-/* .images:hover{
-  /* opacity: 0.9;
-  filter: drop-shadow(1%);
-  transform: scale(1.1); */
-*/
-.record-conversation-img{
-  margin-left: 200px;
-  margin-bottom: 20px;
+.gallery img:hover{
+   transform: scale(1.1);
+  cursor: pointer;
 }
 /*FOOTER*/
 
 .footer{
-  background-color: #2639A2;  
+background-color: #2639A2; 
+margin-top: 40px; 
+width: 100%;
+margin-left: 0;
+margin-right: 0;
 }
 .subscribe-foot{
-  margin: 0 auto;
+margin: 0 0;
 }
 .sub-foot{
-  margin: 0 auto;
+margin: 0 auto;
 }
 .subscribe-text{
-  padding: 40px 0;
-  font-weight: 600;
-  font-size: 26px;
+padding: 40px 0;
+font-weight: 600;
+font-size: 26px;
 }
 .subscribe-paragraph{
-  font-size: 12px;
-  color:rgba(255, 255, 255, 0.7);
-  margin-top: -40px;
-  padding-bottom: 20px;
+font-size: 12px;
+color:rgba(255, 255, 255, 0.7);
+margin-top: -40px;
+padding-bottom: 20px;
 }
 .form{
-  width: 380px;
-  margin: 0 auto;
-  padding-bottom: 30px;
+width: 380px;
+margin: 0 auto;
+padding-bottom: 30px;
 }
 btn-hover{
-  width: 400px;
-  margin:0 auto;
-  background-color:#f2f2f2 !important;
-  color:#f2f2f2 !important;
-  margin-bottom: 30px;
+width: 400px;
+margin:0 auto;
+background-color:#f2f2f2 !important;
+color:#f2f2f2 !important;
+margin-bottom: 30px;
 }
 .sub-btn{
-  background-color:#9533C2 !important;
-  color: #f2f2f2 !important;
-  height: 38px;
-  border: none;
+background-color:#9533C2 !important;
+color: #f2f2f2 !important;
+height: 38px;
+border: none;
 }
 a[type="buttonn"]:hover {
-  background-color:#9533C2 !important;
-  color:#f2f2f2 !important;
+background-color:#9533C2 !important;
+color:#f2f2f2 !important;
 }
 .footer-text{
-  font-weight: 600;
-  font-size: 18px;
-  display: inline;
+font-weight: 600;
+font-size: 18px;
+display: inline;
 }
 .copyright{
-  justify-content: flex-end;
-  display: flex;
+justify-content: flex-end;
+display: flex;
 } 
 .copyright-sub{
-  font-size: 12px ;
-  display: inline;
+font-size: 12px ;
+display: inline;
 }
 
 @media screen and (max-width: 1196px){
 .track-form{
-    width: 300px;
+  width: 300px;
 }
 }
 @media screen and (max-width: 360px){
-  .work-logo-img{
-      display: none;
+.work-logo-img{
+    display: none;
+}
+}
+@media screen and (max-width: 982px){
+  .transcribe-subtext{
+     font-size: 15px;
   }
-  }
-  @media screen and (max-width: 982px){
-    .transcribe-subtext{
-       font-size: 15px;
-    }
-  }  
+}  
