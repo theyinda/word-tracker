@@ -1,37 +1,22 @@
-// const alertGo = document.querySelector('.alert');
+const alertGo = document.querySelector('.alert');
 
-// function clearAlert() {
-//     if (alertGo) {
-//         alertGo.style.display ="none"
-//     }
-// }
+function clearAlert() {
+    if (alertGo) {
+        alertGo.style.display ="none"
+    }
+}
 
-// setTimeout(clearAlert, 5000);
+setTimeout(clearAlert, 5000);
 
-// const emailField = document.querySelectorAll('.email-form');
-// const submitButton = document.querySelectorAll('.email-button');
-// function clearField() {
-//     if (alertGo.classList.contains('alert-success')) {
-//         emailField.value="";
-//     }
-//     if ( window.history.replaceState ) {
-//         window.history.replaceState( null, null, window.location.href );
-//       }
-// }
+const emailField = document.querySelectorAll('.email-form');
+const submitButton = document.querySelectorAll('.email-button');
+function clearField() {
+    if (alertGo.classList.contains('alert-success')) {
+        emailField.value="";
+    }
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+      }
+}
 
-// submitButton.addEventListener('submit', clearField());
-
-$(function(){
-    $('.xyz').click(function(e){
-      e.preventDefault();
-      let email = $('.abc').val();
-      $.ajax({
-          url: "x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-          type: "post",
-          data: {email: email},
-          success: function(result){
-              console.log(result)
-          }
-    });
-    })
-  });
+submitButton.addEventListener('submit', clearField());
