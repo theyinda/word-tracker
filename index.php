@@ -136,11 +136,11 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 
             <div class="row">
                   
-              <div class="col-md-6">
+              <div class="col-md-6" data-aos="zoom-in" data-aos-duration="1500">
                 <img class="img-fluid work-logo-img" src="./img/work-logo.svg" alt="clear-audio">
               </div>
 
-              <div class="col-md-6 text">
+              <div class="col-md-6 text" data-aos="zoom-in" data-aos-duration="1500">
                 
                 <div class="row work-ana">
                   
@@ -188,15 +188,15 @@ if (filter_has_var(INPUT_POST, 'submit')) {
             <div class="row ">
             <div class="col-md-4 gallery">
               <div uk-lightbox>
-                <a class="uk-inline" href="./img/galleryTwo-small.svg" data-caption="Sign Up">
-                  <img src="./img/galleryTwo-small.svg" alt="">
+                <a class="uk-inline" href="./img/galleryOne-big.svg" data-caption="Sign Up">
+                  <img src="./img/galleryOne-small.svg" alt="">
                 </a>  
               </div> 
               </div>
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/galleryTwo-small.svg" data-caption="Record">
+                  <a class="uk-inline" href="./img/galleryTwo-big.svg" data-caption="Record">
                     <img src="./img/galleryTwo-small.svg" alt="">
                   </a>  
                 </div> 
@@ -204,7 +204,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/galleryThree-small.svg" data-caption="Recordings">
+                  <a class="uk-inline" href="./img/galleryThree-big.svg" data-caption="Recordings">
                     <img src="./img/galleryThree-small.svg" alt="">
                   </a>  
                 </div> 
@@ -218,7 +218,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
               <div class="col-md-4 gallery">
 
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/galleryFour-small.svg" data-caption="Settings">
+                  <a class="uk-inline" href="./img/galleryFour-big.svg" data-caption="Settings">
                     <img src="./img/galleryFour-small.svg" alt="">
                   </a>  
                 </div> 
@@ -226,7 +226,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/galleryFive-small.svg" data-caption="Words">
+                  <a class="uk-inline" href="./img/galleryFive-big.svg" data-caption="Words">
                     <img src="./img/galleryFive-small.svg" alt="">
                   </a>  
                 </div> 
@@ -234,8 +234,8 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/gallerySix-small.svg" data-caption="Ranking">
-                    <img src="./img//gallerySix-small" alt="">
+                  <a class="uk-inline" href="./img/gallerySix-big.svg" data-caption="Ranking">
+                    <img src="./img/gallerySix-small" alt="">
                   </a>  
                 </div> 
               </div>
