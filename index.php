@@ -188,24 +188,24 @@ if (filter_has_var(INPUT_POST, 'submit')) {
             <div class="row ">
             <div class="col-md-4 gallery">
               <div uk-lightbox>
-                <a class="uk-inline" href="./img/rc-small.svg" data-caption="Caption 2">
-                  <img src="./img/rc-small.svg" alt="">
+                <a class="uk-inline" href="./img/galleryTwo-small.svg" data-caption="Sign Up">
+                  <img src="./img/galleryTwo-small.svg" alt="">
                 </a>  
               </div> 
               </div>
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/rc-small.svg" data-caption="Caption 2">
-                    <img src="./img/rc-small.svg" alt="">
+                  <a class="uk-inline" href="./img/galleryTwo-small.svg" data-caption="Record">
+                    <img src="./img/galleryTwo-small.svg" alt="">
                   </a>  
                 </div> 
               </div>
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/rc-small.svg" data-caption="Caption 2">
-                    <img src="./img/rc-small.svg" alt="">
+                  <a class="uk-inline" href="./img/galleryThree-small.svg" data-caption="Recordings">
+                    <img src="./img/galleryThree-small.svg" alt="">
                   </a>  
                 </div> 
               </div>
@@ -218,24 +218,24 @@ if (filter_has_var(INPUT_POST, 'submit')) {
               <div class="col-md-4 gallery">
 
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/rc-small.svg" data-caption="Caption 2">
-                    <img src="./img/rc-small.svg" alt="">
+                  <a class="uk-inline" href="./img/galleryFour-small.svg" data-caption="Settings">
+                    <img src="./img/galleryFour-small.svg" alt="">
                   </a>  
                 </div> 
               </div>
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/rc-small.svg" data-caption="Caption 2">
-                    <img src="./img/rc-small.svg" alt="">
+                  <a class="uk-inline" href="./img/galleryFive-small.svg" data-caption="Words">
+                    <img src="./img/galleryFive-small.svg" alt="">
                   </a>  
                 </div> 
               </div>
 
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
-                  <a class="uk-inline" href="./img/rc-small.svg" data-caption="Caption 2">
-                    <img src="./img/rc-small.svg" alt="">
+                  <a class="uk-inline" href="./img/gallerySix-small.svg" data-caption="Ranking">
+                    <img src="./img//gallerySix-small" alt="">
                   </a>  
                 </div> 
               </div>
