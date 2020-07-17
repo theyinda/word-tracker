@@ -4,10 +4,14 @@
 // $password = "";
 // $dbname = "email_task";
 
-$host = "x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-$dbusername = "kwws14q1gbssr121";
-$dbpassword = "byn7cat9pgu42j1d";
-$dbname = "a0xy0b5qb5exk0kd";
+// $host = "x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+// $dbusername = "kwws14q1gbssr121";
+// $dbpassword = "byn7cat9pgu42j1d";
+// $dbname = "a0xy0b5qb5exk0kd";
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "users";
 
 
 $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
@@ -72,21 +76,28 @@ if (filter_has_var(INPUT_POST, 'submit')) {
           <img class="logo-img" src="img/logo.svg" alt="logo">
        </div>
         <div class="row">
-          <div class="col-md-4"data-aos="fade-right" data-aos-duration="1500">
+          <div class="col-md"data-aos="fade-right" data-aos-duration="1500">
             <h2 class="logo-txt">Now you can track your<br> frequently most-used<br> words</h2>
             <p>Find out what words you’ve said the most.</p>
 
-            <div class="input-group mb-3 track-form">
-              <input type="text" class="form-control " value="<?php echo isset($_POST['email']) ? $email : ''; ?>" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="button-addon2">
-              <div class="input-group-append">
-                <a type="button" class="nav-link btn-primary" href="#">Join Waitlist</a>
-              </div>
-            </div>
+            <form action="index.php" method="POST">
+                <?php if ($msg != '') : ?>
+                  <div style="width: 60%; height: 60px; text-align:center; margin:auto; margin-bottom:30px" class="alert <?php echo $msgClass; ?>">
+                      <?php echo $msg ?>
+                  </div>
+                <?php endif; ?>  
+                <div class="input-group mb-3 track-form">
+                    <input type="email" class="form-control" required name="email"  value="<?php echo isset($_POST['email']) ? $email : ''; ?>" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary" name="submit">Join Waitlist</button>
+                        </div>
+                </div>
+            </form>
           </div>
 
           <div class="col-md-8" data-aos="fade-left" data-aos-duration="1500">
             <img class=" header-bg" src="./img/header-bg.svg" alt="clear-audio">
-        </div>
+          </div>
         </div>
       </div>
     </section>  
@@ -100,14 +111,14 @@ if (filter_has_var(INPUT_POST, 'submit')) {
 
                 <div class="row feature">
                   
-                  <div class="col-md-6" data-aos="fade-right" data-aos-duration="1500">
+                  <div class="col-md-6 feature-content" data-aos="fade-right" data-aos-duration="1500">
                     <img class="img-fluid clear-audio-img" src="./img/clear-audio.svg" alt="clear-audio">
                     <h3 class="clear-audio-text text-center">Clear Audio</h3>
                       <p class="clear-audio-subtext text-center">Clear audio recordings. special sound field <br>that detects the persons voice while they<br> speak.</p>
                     </p>
                   </div>
 
-                  <div class="col-md-6 text" data-aos="zoom-in-up" data-aos-duration="1500">
+                  <div class="col-md-6 text feature-content" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img class="img-fluid apple-watch-img" src="./img/apple-watch.svg" alt="apple-watch">
                     <h3 class="apple-watch-text text-center">Apple Watch</h3>
                         <p class="apple-watch-subtext text-center">Record audio anywhere right from your<br> wrist. Quickly capture spontaneous<br> conversations by just a tap</p>
@@ -241,13 +252,13 @@ if (filter_has_var(INPUT_POST, 'submit')) {
                   <p class="text-white subscribe-paragraph">Be the first to know when this app is up and running</p>
                  
                   <form action="index.php" method="POST">
-						<?php if ($msg != '') : ?>
-							<div style="width: 60%; height: 60px; text-align:center; margin:auto; margin-bottom:30px" class="alert <?php echo $msgClass; ?>">
-								<?php echo $msg ?>
-							</div>
-						<?php endif; ?>  
+                      <?php if ($msg != '') : ?>
+                        <div style="width: 60%; height: 60px; text-align:center; margin:auto; margin-bottom:30px" class="alert <?php echo $msgClass; ?>">
+                          <?php echo $msg ?>
+                        </div>
+                      <?php endif; ?>  
                         <div class="input-group mb-3 text-center form">
-                            <input type="text" class="form-control btn-hover" value="<?php echo isset($_POST['email']) ? $email : ''; ?>" placeholder="Your Email">
+                            <input type="email" class="form-control btn-hover" required name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>" placeholder="Your Email">
                             <div class="input-group-append">
                             <button type="submit" class="btn sub-btn" name="submit">Subscribe now</button>
                             </div>
