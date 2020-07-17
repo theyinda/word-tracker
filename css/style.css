@@ -28,7 +28,7 @@ margin-top: 100px;
 padding-left: 12px;
 }
 .track-form{
-width: 380px;
+width: 100%;
 padding-bottom: 30px;
 margin-top: 30px;
 }
@@ -59,8 +59,9 @@ margin-top: 50px;
 margin-bottom: 40px;
 }
 .clear-audio-img{
-margin-left: 220px;
-margin-bottom: 20px;
+  margin: auto;
+  text-align: center;
+  display: block;
 }
 .clear-audio-text{
 color:#1E1724;
@@ -70,8 +71,9 @@ font-weight: 600;
 margin-bottom: 40px;
 }
 .apple-watch-img{
-margin-left: 220px;
-margin-bottom: 20px;
+    margin: auto;
+    text-align: center;
+    display: block;
 }
 .apple-watch-text{
 color:#1E1724;
@@ -92,10 +94,11 @@ font-weight: 600;
 }
 .work-ana{
   margin-right: 0px;
+  text-align: center;
 }
 .work-logo-img{
 margin-top: 70px;
-margin-left: 30px;
+/* margin-left: 30px; */
 }
 .record-text{
 color:#1E1724;
@@ -136,8 +139,9 @@ font-size: 15px;
   margin-top: 40px;
 }
 .gallery{
- display: flex;
- justify-content: center;
+margin: 10px 0;
+display: flex;
+justify-content: center;
 }
 .gallery img:hover{
    transform: scale(1.1);
@@ -169,11 +173,16 @@ color:rgba(255, 255, 255, 0.7);
 margin-top: -40px;
 padding-bottom: 20px;
 }
+
 .form{
-width: 380px;
+width: 100%;
+max-width: 380px;
 margin: 0 auto;
 padding-bottom: 30px;
 }
+
+@media
+
 btn-hover{
 width: 400px;
 margin:0 auto;
@@ -220,3 +229,14 @@ display: inline;
      font-size: 15px;
   }
 }  
+
+@media screen and (min-width: 900px){
+  .form, .track-form{
+    width: 380px;
+  }
+}  
+
+.row{
+  margin-left:  0 !important;
+  margin-right:  0 !important;
+}
