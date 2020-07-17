@@ -1,71 +1,51 @@
 <?php
-$conn = new mysqli("x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com","kwws14q1gbssr121","byn7cat9pgu42j1d","a0xy0b5qb5exk0kd");
-
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
-// echo "connection successful";
-$email = $_POST['email'];
-
-$sql = "INSERT INTO users (email)
-VALUES ('$email')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
 // $host = "localhost";
 // $username = "root";
 // $password = "";
 // $dbname = "email_task";
 
-// $host = "x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-// $dbusername = "kwws14q1gbssr121";
-// $dbpassword = "byn7cat9pgu42j1d";
-// $dbname = "a0xy0b5qb5exk0kd";
+$host = "x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$dbusername = "kwws14q1gbssr121";
+$dbpassword = "byn7cat9pgu42j1d";
+$dbname = "a0xy0b5qb5exk0kd";
 
 
-// $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
 
-// $msg = '';
-// $msgClass = '';
-// // Email form validation
-// if (filter_has_var(INPUT_POST, 'submit')) {
-// 	$email = mysqli_real_escape_string($conn, $_POST['email']);
-// 	if (!empty($email)) {
-// 		if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-// 			$msg = 'Incorrect email';
-// 			$msgClass = 'alert-danger';
-// 		} else {
-// 			$msg = 'Thank you for joining our waitlist';
-// 			$msgClass = 'alert-success';
-// 		}
-// 	} else {
-// 		$msg = 'Kindly fill this space';
-// 		$msgClass = 'alert-danger';
-// 	}
-// 	$select = mysqli_query($conn, "SELECT `email` FROM `users` WHERE `email` = '" . $_POST['email'] . "'");
-// 	if (mysqli_num_rows($select)) {
-// 		$msg = 'Registered';
-// 		$msgClass = 'alert-danger';
-// 	};
-// 	$query = "INSERT INTO users (email) VALUES ('$email')";
-// 	if (mysqli_query($conn, $query)) {
-// 		echo 'Success';
-// 		// 		$msg = 'You have subscribed successfully';
-// 		// 		$msgClass = 'alert-success';
-// 	} else {
-// 		echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
-// 		// 		$msg = 'Your email has not been sent...';
-// 		// 		$msgClass = 'alert-danger';
-// 	}
-// }
-// ?>
+$msg = '';
+$msgClass = '';
+// Email form validation
+if (filter_has_var(INPUT_POST, 'submit')) {
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	if (!empty($email)) {
+		if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+			$msg = 'Incorrect email';
+			$msgClass = 'alert-danger';
+		} else {
+			$msg = 'Thank you for joining our waitlist';
+			$msgClass = 'alert-success';
+		}
+	} else {
+		$msg = 'Kindly fill this space';
+		$msgClass = 'alert-danger';
+	}
+	$select = mysqli_query($conn, "SELECT `email` FROM `users` WHERE `email` = '" . $_POST['email'] . "'");
+	if (mysqli_num_rows($select)) {
+		$msg = 'Registered';
+		$msgClass = 'alert-danger';
+	};
+	$query = "INSERT INTO users (email) VALUES ('$email')";
+	if (mysqli_query($conn, $query)) {
+		echo 'Success';
+		// 		$msg = 'You have subscribed successfully';
+		// 		$msgClass = 'alert-success';
+	} else {
+		echo "ERROR: Could not able to execute $query. " . mysqli_error($conn);
+		// 		$msg = 'Your email has not been sent...';
+		// 		$msgClass = 'alert-danger';
+	}
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -260,17 +240,16 @@ $conn->close();
                   <h2 class="text-white subscribe-text">Subscribe for Beta Access!</h2>
                   <p class="text-white subscribe-paragraph">Be the first to know when this app is up and running</p>
                  
-                  <form>
-						<!-- 
+                  <form action="index.php" method="POST">
+						<?php if ($msg != '') : ?>
 							<div style="width: 60%; height: 60px; text-align:center; margin:auto; margin-bottom:30px" class="alert <?php echo $msgClass; ?>">
-								
+								<?php echo $msg ?>
 							</div>
-						   -->
+						<?php endif; ?>  
                         <div class="input-group mb-3 text-center form">
-                              <input type="email" class="abc form-control btn-hover" placeholder="Your Email"> 
-                           
+                            <input type="text" class="form-control btn-hover" value="<?php echo isset($_POST['email']) ? $email : ''; ?>" placeholder="Your Email">
                             <div class="input-group-append">
-                            <button type="button" class="btn sub-btn xyz" name="submit">Subscribe now</button>
+                            <button type="submit" class="btn sub-btn" name="submit">Subscribe now</button>
                             </div>
                         </div>
                     </form>  
@@ -303,7 +282,6 @@ $conn->close();
     <script>
       AOS.init();
     </script>
-    <script src="php-form.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
   </body> 
