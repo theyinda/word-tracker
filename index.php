@@ -9,7 +9,7 @@ if ($mysqli -> connect_errno) {
 // echo "connection successful";
 $email = $_POST['email'];
 
-$sql = "INSERT INTO subscribers (email)
+$sql = "INSERT INTO users (email)
 VALUES ('$email')";
 
 if ($conn->query($sql) === TRUE) {
