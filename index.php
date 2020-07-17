@@ -235,7 +235,7 @@ if (filter_has_var(INPUT_POST, 'submit')) {
               <div class="col-md-4 gallery">
                 <div uk-lightbox>
                   <a class="uk-inline" href="./img/gallerySix-big.svg" data-caption="Ranking">
-                    <img src="./img/gallerySix-small" alt="">
+                    <img src="./img/gallerySix-small.svg" alt="">
                   </a>  
                 </div> 
               </div>
